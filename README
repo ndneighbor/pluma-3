@@ -1,0 +1,38 @@
+______________________________________________________________________________________________
+To Compile PluMA:
+
+Install scons:
+http://www.scons.org/
+
+Once installed, the command to compile is:
+
+"scons"
+
+This will assume you have all compatible languages: C/C++, Python, CUDA, Perl, and R.
+
+If you do not have some or all of the last three (CUDA, Perl, R) you can leave them out of the
+compilation by passing "cuda=0", "perl=0" and/or "r=0" to scons, i.e.
+
+scons cuda=0 r=0
+
+Would run with Perl but not CUDA or R.
+_______________________________________________________________________________________________
+
+To Run PluMA:
+
+Upon successful compilation, the command to run PluMA is:
+
+./pluma (config file) (optional restart point)
+
+i.e.
+
+./pluma config.txt
+
+Would run the pipeline in the file config.txt
+
+I can also run that pipeline from a specific stage by supplying an optional restart point, i.e.:
+
+./pluma config.txt ATria
+
+Would run starting from the "ATria" plugin in "config.txt".
+________________________________________________________________________________________________
